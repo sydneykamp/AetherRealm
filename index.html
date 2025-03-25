@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation/Accordion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        .registration-form {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-b from-black via-gray-900 to-purple-800 text-white">
+    <header class="bg-gradient-to-r from-pink-600 via-purple-500 to-indigo-600 text-white p-6">
+        <div class="container mx-auto flex justify-between gap-6 items-center">
+            <a href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
+            </a>
+
+            <nav>
+                <ul class="flex space-x-6 flex-wrap menu">
+                    <li><a href="index.html" class="hover:text-gray-300 p-2 block">Validation</a></li>
+                    <li><a href="masonry.html" class="hover:text-gray-300 p-2 block">Masonry</a></li>
+                    <li><a href="multi.php" class="hover:text-gray-300 p-2 block">Multi-Select</a></li>
+                    <li><a href="slider.html" class="hover:text-gray-300 p-2 block">Slider</a></li>
+                    <li><a href="flot.php" class="hover:text-gray-300 p-2 block">Flot Chart</a></li>
+                    <li><a href="custom.html" class="hover:text-gray-300 p-2 block">Custom Mini Game</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-8 text-center">
+        <section class="my-12">
+            <h1 class="text-4xl font-bold mb-4 text-indigo-300">Welcome to the AetherRealm</h1>
+            <p class="text-lg mb-6">Embark on a journey, explore the lands of Eorzea, and engage with fellow adventurers. Just click the button below to fill out the form and become a guild member!</p>
+
+            <button class="button-64 mx-auto w-fit open-dialog"><span>Join the Guild</span></button>
+        </section>
+
+        <section class="py-8">
+            <h2 class="text-3xl font-semibold mb-4 text-indigo-300">Final Fantasy XIV Fun Facts</h2>
+
+            <div class="accordion space-y-4 text-left">
+                <h3>The Rise of the Warrior of Light</h3>
+                <p class="p-2 bg-white text-black rounded-md">Did you know? The Warrior of Light is a central figure in FFXIV, a hero chosen by the Mothercrystal, Hydaelyn. This iconic figure has helped save Eorzea from countless threats, including the mighty primals and the terrifying Garlean Empire!</p>
+
+                <h3>A Land of Many Wonders</h3>
+                <p class="p-2 bg-white text-black rounded-md">Eorzea is home to a massive variety of landscapes, from the lush and mystical forests of the Shroud to the fiery deserts of Ul'dah! There's always a new adventure waiting just around the corner, whether you're crafting or slaying monsters.</p>
+
+                <h3>Summon Your Friends (and Enemies!)</h3>
+                <p class="p-2 bg-white text-black rounded-md">Did you know that in FFXIV, you can summon powerful entities called Primals? These creatures are often inspired by gods from various cultures. Whether you're summoning Ifrit to wreak havoc or fighting the fierce Titan, each primal fight is a spectacle.</p>
+
+                <h3>The Legacy of the Crystal Tower</h3>
+                <p class="p-2 bg-white text-black rounded-md">The Crystal Tower is one of the most iconic landmarks in FFXIV's history. Originally part of the game's original storyline, it has grown into a symbol of hope, with its impressive architecture and unique connection to the game's overarching narrative.</p>
+
+                <h3>Your Very Own Moogle</h3>
+                <p class="p-2 bg-white text-black rounded-md">Everyone loves a Moogle! These adorable creatures are not only cute, but they also play an important role in the game's economy and story. In fact, they often serve as messengers for special events and deliver adorable gifts to players!</p>
+            </div>
+        </section>
+
+        <section class="mt-12">
+            <h2 class="text-3xl font-semibold mb-4 text-indigo-300">Test Your Reflexes with the Moogle Mini Game</h2>
+            <p class="text-lg mb-4">Engage in a fun challenge to catch the mischievous Moogle and test your speed.</p>
+
+            <a href="custom.html" class="button-64 mx-auto w-fit"><span>Play the Game</span></a>
+        </section>
+
+        <div title="Join the Guild" class="registration-form p-8 rounded-lg w-fit">
+            <form class="reg-form" action="#">
+                <div class="flex justify-center gap-4">
+                    <div class="mb-4 w-full">
+                        <label for="name" class="block text-sm">Name *</label>
+                        <input type="text" id="name" name="name" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                    </div>
+    
+                    <div class="mb-4 w-full">
+                        <label for="email" class="block text-sm">Email *</label>
+                        <input type="email" id="email" name="email" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                    </div>
+                </div>
+    
+                <div class="mb-4">
+                    <label for="url" class="block text-sm">Personal URL *</label>
+                    <input type="url" id="url" name="url" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="credit" class="block text-sm">Credit Card (For Guild Donations) *</label>
+                    <input type="text" id="credit" name="credit" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="age" class="block text-sm">Age *</label>
+                    <input type="number" id="age" name="age" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                </div>
+    
+                <div class="mb-4">
+                    <label for="comments" class="block text-sm">Guild Comments</label>
+                    <textarea id="comments" name="comments" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full"></textarea>
+                </div>
+    
+                <div class="flex justify-center gap-4">
+                    <div class="mb-4 w-full">
+                        <label for="password" class="block text-sm">Password *</label>
+                        <input type="password" id="password" name="password" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                    </div>
+    
+                    <div class="mb-4 w-full">
+                        <label for="confirm" class="block text-sm">Confirm Password *</label>
+                        <input type="password" id="confirm" name="confirm" class="mt-1 px-4 py-2 border border-gray-600 rounded-md w-full">
+                    </div>
+                </div>
+    
+                <div class="mb-4">
+                    <input type="submit" value="Submit" class="button-64 w-full py-3" name="submit">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-white p-6 mt-8">
+        <div class="container mx-auto text-center space-y-6">
+            <section>
+                <h3 class="text-3xl font-bold text-indigo-300 mb-2">AetherRealm</h3>
+                <small class="text-gray-400">A community for Final Fantasy XIV adventurers, lore enthusiasts, and heroes of Eorzea.</small>
+            </section>
+
+            <hr class="md:w-8/12 mx-auto">
+
+            <p class="text-indigo-200 text-sm">This site is an academic project, not affiliated with Square Enix.</p>
+            <p class="text-sm text-gray-400 flex items-center gap-1 justify-center">Created with 
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                </svg> 
+                by Sydney Kampjes
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+
+    <script>
+        $(".accordion").accordion({
+            heightStyle: "content",
+            active: false,
+            collapsible: true
+        });
+
+        $(".open-dialog").click(function () {
+            $(".registration-form").dialog({
+                modal: true,
+                width: '100%'
+            });
+        });
+
+        $(".reg-form").validate({
+            errorClass: "error-message",
+            errorElement: "div",
+            rules: {
+                name: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                url: {
+                    required: true,
+                    url: true
+                },
+                credit: {
+                    required: true,
+                    digits: true,
+                    minlength: 16
+                },
+                age: {
+                    required: true,
+                    digits: true
+                },
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                confirm: {
+                    required: true,
+                    equalTo: "#password"
+                }
+            }
+        });
+    </script>
+</body>
+</html>
